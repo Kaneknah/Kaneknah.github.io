@@ -1,33 +1,30 @@
+/* Adds CSS properties to all aspects of the page.*/
 * {
-    color: #606c38;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-    background-color: #ccd5ae;
-    width: 100%;
+    background-color: #d9dcd6;
 }
 
 .header {
-    padding: 5px;
-    overflow: hidden;
-    position: fixed;
-    display: inline;
+    padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* background-color: #e9edc9; */
-    color: #d4a373;
-    width: 100%;
-    top: 0;
-    border: solid #a3b18a;
-    background-image: linear-gradient(#bdbdba, #e9edc9);
+    background-color: #2a607c;
+    color: #ffffff;
 }
 
+/* Accessing different portions of the header by using the class and then the element. */
 .header h1 {
-    font-size: 48px;
     display: inline-block;
-    margin: 5px;
+    font-size: 48px;
 }
 
+.header h1 .seo {
+    color: #d9dcd6;
+}
 
 .header nav {
     padding-top: 15px;
@@ -37,130 +34,127 @@ body {
     font-size: 20px;
 }
 
+/* Selects the unordered lists of the navigation element in the header class */
+.header nav ul {
+    list-style-type: none;
+}
+
 .header nav ul li {
     display: inline-block;
     margin-left: 25px;
 }
 
+/* Selects all anchor and paragraph elements in the HTML   */
 a {
-    color: #d4a373;
+    color: #ffffff;
     text-decoration: none;
 }
 
-a:hover {
-    color: #da842e;
+p {
+    font-size: 16px;
 }
 
-h2 {
-    /* background-color: #faedcd; */
-    background-image: linear-gradient(to right, #faedcd, #cdc9c0);
-}
-
-#about {
-    display: block;
-    width: 75%;
-    float: left;
-    /* background-color: #e9edc9; */
-    margin-bottom: 15px;
-    margin-top: 100px;
-    border: solid #a3b18a;
-    background-image: linear-gradient(#bdbdba, #e9edc9);
-}
-
-#about img {
-    margin: 10px;
-    box-shadow: 5px 5px;
+.hero {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/digital-marketing-meeting.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .float-left {
     float: left;
     margin-right: 25px;
-    height: 200px;
-    width: auto;
 }
 
-#contact {
-    display: block;
-    height: 100%;
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+
+.content {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.article {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+.benefits {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
     float: right;
     width: 20%;
-    margin-bottom: 15px;
-    margin-top: 100px;
-
-    /* background-color: #e9edc9; */
-    border: solid #a3b18a;
-    background-color: #e9edc9;
-    background-image: linear-gradient(#bdbdba, #e9edc9);
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
 }
 
-#contact p {
-    font-size: xx-large;
-    line-height: 3;
+/* Accessing different portions of the article by using the class and then the element. */
+.bene-article {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+.bene-article h3 {
+    margin-bottom: 10px;
     text-align: center;
-
 }
 
-Main {
+.bene-article img {
     display: block;
-    width: 75%;
-    float: left;
-    justify-content: center;
-    /* background-color: #e9edc9; */
-    border: solid #a3b18a;
-    background-image: linear-gradient(#bdbdba, #e9edc9);
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+.content img {
+    max-height: 200px;
 }
 
 
-
-#projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    justify-items: center;
-    flex-direction: row;
-
+.content h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
 }
 
-.card {
-    border: solid black;
-    flex: 1 0 40%;
+.footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    min-width: 300px;
-
 }
 
-.card img {
-
-    box-shadow: 5px 5px;
-    opacity: 1;
-    object-fit: scale-down;
-
-
+.footer h2 {
+    font-size: 20px;
 }
 
-.card img:hover {
-    opacity: .5;
-}
+/* GIVEN a webpage meets accessibility standards
+ WHEN I view the source code 
+ THEN I find semantic HTML elements 
+ WHEN I view the structure of the HTML elements 
+ THEN I find that the elements follow a logical structure independent of styling and positioning 
+ WHEN I view the image elements 
+ THEN I find accessible alt attributes 
+ WHEN I view the heading attributes 
+ THEN they fall in sequential order 
+ WHEN I view the title element 
+ THEN I find a concise,
+descriptive title 
 
-#maincard {
-    border: solid black;
-    flex: 1 0 60%;
-    text-align: center;
-    min-width: 300px;
-}
-
-/* TODO
-GIVEN I need to sample a potential employee's previous work
- WHEN I load their portfolio 
- Done/THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
- WHEN I click one of the links in the navigation 
- Done/HEN the UI scrolls to the corresponding section
- WHEN I click on the link to the section about their work 
- Done/THEN the UI scrolls to a section with titled images of the developer's applications
- WHEN I am presented with the developer's first application
- THEN that application's image should be larger in size than the others
- WHEN I click on the images of the applications 
- Done/THEN I am taken to that deployed application 
- WHEN I resize the page or view the site on various screens and devices 
- THEN I am presented with a responsive layout that adapts to my viewport
+Good Job ! You have a good start here. There are just a few technical acceptance criteria missing that I have listed below. * Application's CSS file contains very few comments
+ * Repo doesn't have a unique name
+ * Code doesn't follow good practices for class/id names, indentation, lacks quality comments
+ * Repository README is missing 2 of the following: description,
+screenshot,
+or link to deployed application. If you need additional help remember to reach out to your instructional staff and tutors. They can help you with anything you need regarding this assignment. Thanks -JR,
+Central Grader
 */
