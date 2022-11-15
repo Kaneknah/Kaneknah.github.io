@@ -20,6 +20,8 @@ No Instalation Steps
 ## Usage
 
 This Project is simply used to showcase my abilities to debug and restructure HTML and CSS concepts.
+![Alt text](assets/images/ftop-page.jpg)
+![Alt text](assets/images/bottom-page.jpg)
 
 ## Credits
 
